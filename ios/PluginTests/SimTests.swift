@@ -12,13 +12,42 @@ class SimTests: XCTestCase {
         super.tearDown()
     }
 
-    func testEcho() {
-        // This is an example of a functional test case for a plugin.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-
+    func testGetSimCarrierId() {
         let implementation = Sim()
-        let value = "Hello, World!"
-        let result = implementation.echo(value)
+        let value = -1
+        let result = implementation.getSimCarrierId()
+
+        XCTAssertEqual(value, result)
+    }
+
+    func testGetSimCarrierIdName() {
+        let implementation = Sim()
+        let value = ""
+        let result = implementation.getSimCarrierIdName()
+
+        XCTAssertEqual(value, result)
+    }
+
+    func testGetSimCountryIso() {
+        let implementation = Sim()
+        let value = ""
+        let result = implementation.getSimCountryIso()
+
+        XCTAssertEqual(value, result)
+    }
+
+    func testGetSimOperator() {
+        let implementation = Sim()
+        let value = ""
+        let result = implementation.getSimOperator()
+
+        XCTAssertEqual(value, result)
+    }
+
+    func testGetSimOperatorName() {
+        let implementation = Sim()
+        let value = ""
+        let result = implementation.getSimOperatorName()
 
         XCTAssertEqual(value, result)
     }
